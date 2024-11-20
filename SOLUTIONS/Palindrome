@@ -1,0 +1,16 @@
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        num = str(x)
+
+        is_palindrome = True
+
+        for k in range(len(num)//2):
+            if num[k] != num[-(k+1)]:
+                is_palindrome = False
+                break
+
+        return is_palindrome
