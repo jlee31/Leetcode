@@ -22,3 +22,4 @@ class Solution(object):
         else:
             return M
 
+# if it asks for runtime of O(logn) its a good hint that its a binary search
