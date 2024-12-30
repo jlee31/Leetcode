@@ -1,0 +1,12 @@
+from collections import Counter
+class Solution:
+    def maxNumberOfBalloons(self, text: str) -> int:
+        counter = Counter(text)
+        count = 0
+        balloon = "balloon"
+        while True:
+            for letter in balloon:
+                if counter[letter] == 0:
+                    return count
+                counter[letter] -= 1
+            count += 1
