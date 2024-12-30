@@ -1,1 +1,18 @@
+Solution 1: (Kinda slow hmm)
+class Solution:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        collection = {}
+        for key, value in enumerate(magazine):
+            if value in collection:
+                collection[value] += 1
+            else:
+                collection[value] = 1
 
+        for i in ransomNote:
+            if i in collection:
+                collection[i] -= 1
+                if collection[i] < 0:
+                    return False
+            else:
+                return False
+        return True
