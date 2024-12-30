@@ -1,0 +1,12 @@
+class Solution:
+    def numJewelsInStones(self, jewels: str, stones: str) -> int:
+        maps = set()
+        for i in jewels:
+            maps.add(i)
+        res = 0
+        for i in stones:
+            if i in maps:
+                res += 1
+        return(res)
+
+  # Time O(n)
