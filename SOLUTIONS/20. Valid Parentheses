@@ -2,7 +2,8 @@ class Solution:
     def isValid(self, s: str) -> bool:
         hashmap = {')': '(', '}':'{', ']':'['}
         stk = []
-
+        if len(s) % 2 != 0:
+            return False
         for i in s:
             if i not in hashmap:
                 stk.append(i)
@@ -15,5 +16,4 @@ class Solution:
                         return False
         return not stk
         # Time O(n)
-
 
