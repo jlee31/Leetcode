@@ -1,3 +1,24 @@
 # Leetcode
 
-Hello. This repository will include my solutions to Leetcode problems as well as any notes / code I create to assist me with learning how to solve leetcode problems. 
+Solutions to leetcode + Materials
+
+# 📘 Goals: Data Structures & Algorithms
+
+## 📂 Data Structures
+- Arrays and Strings
+- Linked Lists
+- Stacks and Queues
+- Hashing
+- Trees
+- Heaps / Priority Queues
+- Graphs
+- Tries
+
+## 🧠 Algorithms & Techniques
+- Sorting
+- Searching
+- Recursion
+- Dynamic Programming
+- Greedy Algorithms
+- Backtracking
+- Sliding Window / Two Pointer
