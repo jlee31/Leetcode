@@ -1,0 +1,26 @@
+class Solution(object):
+    def removeOuterParentheses(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        stack = []
+        length = len(s)
+        use = [False] * length
+
+        for index, val in enumerate(s):
+            if val == '(':
+                stack.append(index)
+            else: 
+                old_i = stack.pop()
+                if len(stack) > 0:
+                    use[index] = True
+                    use[old_i] = True
+        result = ""
+        for index, val in enumerate(use):
+            if val:
+                result += s[index]
+        return result
+
+
+        
