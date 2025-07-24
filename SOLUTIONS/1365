@@ -36,3 +36,20 @@ class Solution(object):
         for num in nums:
             res.append(nums2.index(num))
         return res
+
+O(nlogn)
+class Solution(object):
+    def smallerNumbersThanCurrent(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        nums2 = sorted(nums)
+        rank = {}
+        for index, num in enumerate(nums2):
+            if num not in rank:
+                rank[num] = index
+        res = []
+        for num in nums:
+            res.append(rank[num])
+        return res
