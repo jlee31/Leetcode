@@ -1,0 +1,32 @@
+class Solution(object):
+    def minTimeToVisitAllPoints(self, points):
+        """
+        :type points: List[List[int]]
+        :rtype: int
+        """
+        
+        diag_val = 0
+        remain_val = 0
+        total = 0
+       
+        l = len(points)
+        for i in range(l - 1):
+            x1 = points[i][0]
+            x2 = points[i+1][0]
+            y1 = points[i][1]
+            y2 = points[i+1][1]
+
+            dist_x = abs(x2 - x1)
+            dist_y = abs(y2 - y1)
+
+            if dist_x >= dist_y:
+                diag_val = abs(dist_x - dist_y)
+                remain_val = abs(diag_val - dist_x)
+            else:
+                diag_val = abs(dist_y - dist_x)
+                remain_val = abs(diag_val - dist_y)
+
+            total += diag_val
+            total += remain_val
+                
+        return total
