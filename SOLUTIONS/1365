@@ -21,3 +21,18 @@ class Solution(object):
             nums2.append(firstval)
             
         return lst
+
+O(n2) solution 
+
+class Solution(object):
+    def smallerNumbersThanCurrent(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        nums2 = sorted(nums)
+        res = []
+        l = len(nums)
+        for num in nums:
+            res.append(nums2.index(num))
+        return res
