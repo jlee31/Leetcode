@@ -1,0 +1,23 @@
+# Brute Force
+class Solution(object):
+    def smallerNumbersThanCurrent(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        nums2 = []
+        for i in nums:
+            nums2.append(i)
+        l = len(nums)
+        lst = []
+        for i in range(l):
+            val = 0
+            for j in range(l):
+                if nums[i] > nums[j]:
+                    val += 1
+            lst.append(val)
+            print(val)
+            firstval = nums2.pop(0)
+            nums2.append(firstval)
+            
+        return lst
