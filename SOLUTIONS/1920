@@ -1,0 +1,23 @@
+class Solution(object):
+    def buildArray(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        # brute force
+        # d = {}
+        # l = len(nums)
+        # ret = []
+        # for i in range(l):
+        #     ret.append(nums[nums[i]])
+        # return ret
+
+        # O(n) and O(1) space
+        l = len(nums)
+        for i in range(l):
+            nums[i] += (1024 * (nums[nums[i]] % 1024))
+        for i in range(l):
+            nums[i] //= 1024
+        return nums
+        
+        
