@@ -1,0 +1,25 @@
+class Solution(object):
+    def numIdenticalPairs(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        # brute force
+        l = len(nums)
+        ret = 0
+        for i in range(l):
+            for j in range(l):
+                if nums[i] == nums[j] and i < j:
+                    ret += 1
+        return ret
+
+        # faster way
+        
+        pairs = {}
+        ret = 0
+        l = len(nums)
+        for i in range(l):
+            if nums[i] in pairs:
+                ret += pairs[nums[i]]
+            pairs[nums[i]] = pairs.get(nums[i], 0) + 1
+        return ret
