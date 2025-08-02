@@ -1,0 +1,29 @@
+class Solution(object):
+    def climbStairs(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        if n == 1: 
+            return 1
+        if n == 2:
+            return 2
+        # return self.climbStairs(n - 2) + self.climbStairs(n - 1)
+        ################################################
+        # arr = [0] * n
+        # arr[0] = 1
+        # arr[1] = 2
+        
+        # for i in range(2, n):
+        #     arr[i] = arr[i - 1] + arr[i - 2]
+
+        # return arr[n - 1]
+        ################################################
+        table = {1:1, 2:2}
+        def f(n):
+            if n in table:
+                return table[n]
+            else:
+                table[n] = f(n - 1) + f(n - 2)
+                return table[n]
+        return f(n)
