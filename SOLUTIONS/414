@@ -1,0 +1,15 @@
+class Solution(object):
+    def thirdMax(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        s = set()
+        n = len(nums)
+        for i in range(n):
+            s.add(nums[i])
+        top_3 = sorted(s, reverse=True)
+        if len(top_3) >= 3:
+            return top_3[2]
+        else:
+            return top_3[0]
