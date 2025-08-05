@@ -1,0 +1,18 @@
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        # hmap = {}
+        # n = len(nums)
+        # for i in range(n):
+        #     if nums[i] in hmap:
+        #         hmap[nums[i]] += 1
+        #     else:
+        #         hmap[nums[i]] = 1
+        # for num in nums:
+        #     if hmap[num] == 1:
+        #         return num
+        # return
+
+        result = 0
+        for num in nums:
+            result ^= num
+        return result
