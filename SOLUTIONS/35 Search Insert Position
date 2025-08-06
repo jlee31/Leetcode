@@ -23,3 +23,30 @@ class Solution(object):
             return M
 
 # if it asks for runtime of O(logn) its a good hint that its a binary search
+
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        def binary_search(l, r):
+            if l > r:
+                return l 
+            m = l + (r - l) // 2
+            if nums[m] == target:
+                return m
+            elif nums[m] < target:
+                return binary_search(m + 1, r)
+            else:
+                return binary_search(l, m - 1)
+        return binary_search(0, len(nums) - 1)
+        
+        
+        # l = 0
+        # r = len(nums) - 1
+        # while l <= r:
+        #     m = l + (r - l) // 2
+        #     if nums[m] == target:
+        #         return m
+        #     elif nums[m] < target:
+        #         l = m + 1
+        #     else:
+        #         r = m - 1
+        # return l
