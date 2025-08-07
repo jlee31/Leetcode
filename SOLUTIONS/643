@@ -1,0 +1,29 @@
+class Solution:
+    def findMaxAverage(self, nums: List[int], k: int) -> float:
+        # sliding window
+        # o(n)
+        n = len(nums)
+        curSum = 0
+        for i in range(k):
+            curSum += nums[i]
+        maxAvg = curSum / k
+
+        for i in range(k, n):
+            curSum += nums[i]
+            curSum -= nums[i - k]
+            avg = curSum / k
+            maxAvg = max(maxAvg, avg)
+        return maxAvg
+
+        # o(n * k)
+        # n = len(nums)
+        # currMax = float('-inf')
+        # for i in range(n - k + 1):
+        #     tempSum = 0
+        #     for j in range(k):
+        #         tempSum += nums[i + j]
+        #     avg = tempSum / k
+        #     if avg > currMax:
+        #         currMax = avg
+        # return currMax
+        # is too slow :-(
