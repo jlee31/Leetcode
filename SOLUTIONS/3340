@@ -1,0 +1,18 @@
+class Solution(object):
+    def isBalanced(self, num):
+        """
+        :type num: str
+        :rtype: bool
+        """
+        o(n)
+        d = [int(d) for d in num]
+        n = len(d)
+        even = 0
+        odd = 0
+        for index in range(n):
+            if index % 2 == 0:
+                odd += d[index]
+            else:
+                even += d[index]
+        return even == odd
+        
