@@ -1,0 +1,17 @@
+class Solution:
+    def heightChecker(self, heights: List[int]) -> int:
+        # d = {}
+        # for heights in heights:
+        #     d[height] = d.get(height,0) + 1
+        # expected = []
+        # f
+
+
+        # n log n
+        expected = sorted(heights)
+        l = len(expected)
+        ret = 0
+        for i in range(l):
+            if heights[i] != expected[i]:
+                ret += 1
+        return ret
