@@ -1,0 +1,13 @@
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        hmap = {}
+        ret = []
+        for num in nums1:
+            hmap[num] = hmap.get(num, 0) + 1
+        
+        for num in nums2:
+            if hmap.get(num, 0) > 0:
+                ret.append(num)
+                hmap[num] -= 1
+        
+        return ret
