@@ -1,0 +1,10 @@
+class Solution:
+    def maximum69Number (self, num: int) -> int:
+        lst = [int(i) for i in str(num)]
+        for index, num in enumerate(lst):
+            if num == 6:
+                lst[index] = 9
+                break
+        number_str = "".join(map(str, lst))
+        result_integer = int(number_str)
+        return result_integer
