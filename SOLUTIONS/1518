@@ -1,0 +1,14 @@
+class Solution(object):
+    def numWaterBottles(self, numBottles, numExchange):
+        """
+        :type numBottles: int
+        :type numExchange: int
+        :rtype: int
+        """
+        ret = numBottles
+        current = numBottles
+        while current >= numExchange:
+            remain = current // numExchange
+            ret += remain
+            current = (current % numExchange) + remain
+        return ret
