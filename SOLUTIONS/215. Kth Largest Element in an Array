@@ -1,0 +1,17 @@
+from heapq import heappop, heappush
+class Solution(object):
+    def findKthLargest(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        nums = [-x for x in nums]
+        heap = []
+        for num in nums:
+            heappush(heap, num)
+        ret = 0
+        for _ in range(k):
+             ret = heappop(heap)
+        return ret * -1
+        
