@@ -1,0 +1,16 @@
+from heapq import heapify, heappop
+class Solution(object):
+    def maxProduct(self, nums):
+        """
+        :type nums: List[int]
+        :rtcype: int
+        """
+        nums = [-x for x in nums]
+        heapify(nums)
+
+        val1 = -heappop(nums)
+        val2 = -heappop(nums)
+
+        return (val1 - 1) * (val2 - 1)
+ 
+        
