@@ -1,0 +1,15 @@
+# Compiled C++ binaries (exercises build to ad-hoc names)
+*.out
+solution
+starter
+fix
+bug
+a.out
+*.o
+*.dSYM/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
