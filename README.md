@@ -1,24 +1,7 @@
-# Leetcode
+# leetcode 
 
-Solutions to leetcode + Materials
+to leetcode or not to leetcode that is the question
 
-# 📘 Goals: Data Structures & Algorithms
+:-)
 
-## 📂 Data Structures
-- Arrays and Strings
-- Linked Lists
-- Stacks and Queues
-- Hashing
-- Trees
-- Heaps / Priority Queues
-- Graphs
-- Tries
-
-## 🧠 Algorithms & Techniques
-- Sorting
-- Searching
-- Recursion
-- Dynamic Programming
-- Greedy Algorithms
-- Backtracking
-- Sliding Window / Two Pointer
+also some interview preperation that i used that you may find useful
