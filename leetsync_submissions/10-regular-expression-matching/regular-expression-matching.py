@@ -15,6 +15,7 @@ class Solution:
                     result = memo(i, j + 2)
                     cache[(i, j)] = result
                     return result
+                cache[(i,j)] = 0
                 return False
 
             if (i, j) in cache:
